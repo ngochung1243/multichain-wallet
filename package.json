@@ -1,5 +1,5 @@
 {
-  "version": "0.2.8",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,7 +19,6 @@
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
-  "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -31,7 +30,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "multichain-crypto-wallet",
+  "name": "multichain-wallet",
   "author": "iamnotstatic",
   "keywords": [
     "multichain",
@@ -52,9 +51,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamnotstatic/multichain-crypto-wallet"
+    "url": "https://github.com/ngochung1243/multichain-wallet"
   },
-  "homepage": "https://github.com/iamnotstatic/multichain-crypto-wallet/blob/main/README.md",
+  "homepage": "https://github.com/ngochung1243/multichain-wallet/blob/main/README.md",
   "module": "dist/multichain-crypto-wallet.esm.js",
   "size-limit": [
     {
