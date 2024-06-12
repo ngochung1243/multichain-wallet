@@ -1,4 +1,4 @@
-# Multichain Crypto Wallet
+# Multichain Wallet
 
 A Multichain crypto wallet library that supports Ethereum, Bitcoin, Solana, Waves and other EVM compatible blockchains E.g. Binance Smart Chain, Polygon, Avalanche etc.
 
@@ -12,13 +12,13 @@ A Multichain crypto wallet library that supports Ethereum, Bitcoin, Solana, Wave
 ## Installation
 
 ```bash
-npm install multichain-crypto-wallet
+npm install multichain-wallet
 ```
 
 Using yarn,
 
 ```bash
-yarn add multichain-crypto-wallet
+yarn add multichain-wallet
 ```
 
 ## Usage
@@ -26,20 +26,20 @@ yarn add multichain-crypto-wallet
 ### Javascript
 
 ```javascript
-const multichainWallet = require('multichain-crypto-wallet');
+const multichainWallet = require('multichain-wallet');
 ```
 
 ### TypeScript
 
 ```typescript
-import * as multichainWallet from 'multichain-crypto-wallet';
+import * as multichainWallet from 'multichain-wallet';
 ```
 
 ## Methods
 
 The following methods are available with this SDK:
 
-- [Multichain Crypto Wallet](#multichain-crypto-wallet)
+- [Multichain Wallet](#multichain-wallet)
   - [Installation](#installation)
   - [Usage](#usage)
     - [Javascript](#javascript)
