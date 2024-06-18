@@ -1,6 +1,6 @@
 import * as bip39 from 'bip39';
 
-import bitcoinHelper from '../../common/helpers/bitcoinHelper';
+// import bitcoinHelper from '../../common/helpers/bitcoinHelper';
 import ethereumHelper from '../../common/helpers/ethereumHelper';
 import solanaHelper from '../../common/helpers/solanaHelper';
 import wavesHelper from '../../common/helpers/wavesHelper';
@@ -30,10 +30,10 @@ function getAddressFromPrivateKey(args: GetAddressFromPrivateKeyPayload) {
     } else if (args.network === 'solana') {
       return solanaHelper.getAddressFromPrivateKey(args.privateKey);
     } else if (args.network.includes('bitcoin')) {
-      return bitcoinHelper.getAddressFromPrivateKey(
-        args.privateKey,
-        args.network
-      );
+      // return bitcoinHelper.getAddressFromPrivateKey(
+      //   args.privateKey,
+      //   args.network
+      // );
     }
 
     throw new Error('Invalid network');
@@ -55,11 +55,11 @@ function generateWalletFromMnemonic(args: GenerateWalletFromMnemonicPayload) {
         args.derivationPath
       );
     } else if (args.network.includes('bitcoin')) {
-      return bitcoinHelper.generateWalletFromMnemonic(
-        args.network,
-        args.mnemonic,
-        args.derivationPath
-      );
+      // return bitcoinHelper.generateWalletFromMnemonic(
+      //   args.network,
+      //   args.mnemonic,
+      //   args.derivationPath
+      // );
     } else if (args.network === 'waves') {
       return wavesHelper.generateWalletFromMnemonic(
         args.mnemonic,
@@ -80,7 +80,7 @@ function createWallet(args: CreateWalletPayload) {
     } else if (args.network === 'solana') {
       return solanaHelper.createWallet(args.derivationPath);
     } else if (args.network.includes('bitcoin')) {
-      return bitcoinHelper.createWallet(args.network, args.derivationPath);
+      // return bitcoinHelper.createWallet(args.network, args.derivationPath);
     } else if (args.network === 'waves') {
       return wavesHelper.createWallet(args.cluster);
     }
@@ -97,7 +97,7 @@ async function getBalance(args: BalancePayload) {
     } else if (args.network === 'solana') {
       return await solanaHelper.getBalance({ ...args });
     } else if (args.network.includes('bitcoin')) {
-      return await bitcoinHelper.getBalance(args.address, args.network);
+      // return await bitcoinHelper.getBalance(args.address, args.network);
     } else if (args.network === 'waves') {
       return await wavesHelper.getBalance({ ...args });
     }
@@ -115,7 +115,7 @@ async function transfer(args: TransferPayload) {
     } else if (args.network === 'solana') {
       return await solanaHelper.transfer({ ...args });
     } else if (args.network.includes('bitcoin')) {
-      return await bitcoinHelper.transfer({ ...args });
+      // return await bitcoinHelper.transfer({ ...args });
     } else if (args.network === 'waves') {
       return await wavesHelper.transfer({ ...args });
     }
@@ -133,7 +133,7 @@ async function getTransaction(args: GetTransactionPayload) {
     } else if (args.network === 'solana') {
       return await solanaHelper.getTransaction({ ...args });
     } else if (args.network.includes('bitcoin')) {
-      return await bitcoinHelper.getTransaction({ ...args });
+      // return await bitcoinHelper.getTransaction({ ...args });
     } else if (args.network === 'waves') {
       return await wavesHelper.getTransaction({ ...args });
     }
